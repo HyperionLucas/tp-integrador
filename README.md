@@ -1,28 +1,47 @@
 # TP Integrador - Sistema de Gestión de Producción y Manufactura
 
-Proyecto desarrollado en Python y Django, respetando una arquitectura por capas.
+Proyecto desarrollado en Python utilizando Django, FastAPI, PostgreSQL y Docker, siguiendo una arquitectura por capas.
 
 ## Objetivo
 
 Administrar información relacionada con producción y manufactura:
 
-- productos;
-- recursos;
-- órdenes de producción;
-- estados productivos;
-- validaciones;
-- trazabilidad;
-- respuestas en formato JSON.
+* Productos
+* Recursos
+* Órdenes de producción
+* Estados productivos
+* Validaciones
+* Trazabilidad
+* Respuestas en formato JSON
 
 ## Tecnologías
 
-- Python 3.10 o superior
-- Django
-- JSON
-- VS Code
-- Git y GitHub
+* Python 3.10 o superior
+* Django
+* FastAPI
+* PostgreSQL
+* Docker
+* Docker Compose
+* JSON
+* VS Code
+* Git y GitHub
+
+## Arquitectura
+
+El proyecto implementa una arquitectura por capas:
+
+* Controller
+* Service
+* Repository
+* DTO
+* Validator
+* Exception
+
+Esta estructura permite separar responsabilidades y facilita el mantenimiento del sistema.
 
 ## Cómo ejecutar
+
+### Ejecución local
 
 ```bash
 python -m venv venv
@@ -32,19 +51,40 @@ python manage.py migrate
 python manage.py runserver
 ```
 
-Abrir:
+### Ejecución con Docker
+
+```bash
+docker compose up --build -d
+```
+
+## Acceso a la aplicación
+
+### Django
 
 ```text
 http://127.0.0.1:8000/products/
 ```
 
-## Subir a GitHub
+### FastAPI
 
-```bash
-git init
-git add .
-git commit -m "Primer commit TP Integrador"
-git branch -M main
-git remote add origin URL_DE_TU_REPOSITORIO
-git push -u origin main
+```text
+http://127.0.0.1:8000/
 ```
+
+### Documentación Swagger de FastAPI
+
+```text
+http://127.0.0.1:8000/docs
+```
+
+## Repositorio GitHub
+
+```text
+https://github.com/HyperionLucas/tp-integrador
+```
+
+## Autor
+
+Lucas Laborde
+
+Trabajo Práctico Integrador - Equipo Alpha
